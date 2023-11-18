@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CategorieController extends AbstractController {
 
-    #[Route("/categorie")]
+    #[Route("/categories")]
 
     public function categories(){
         $categories =[
@@ -18,7 +18,7 @@ class CategorieController extends AbstractController {
             ]
                 
         ];
-        return $this->render("categorie.html.twig");
+        return $this->render("categorie.html.twig", $categories);
 
     }
 
@@ -30,7 +30,7 @@ class CategorieController extends AbstractController {
             "id" => $id
         ];
 
-        return $this->render("categorie-id.html.twig");
+        return $this->render("categorie-id.html.twig", $data);
 
     }
 
